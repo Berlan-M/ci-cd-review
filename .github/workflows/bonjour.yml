@@ -4,4 +4,4 @@ jobs:
   dire_bonjour:
     runs-on: ubuntu-18.04
     steps:
-    - run: echo "Bonjour 👋 "
+    - run: echo "Bonjour Berlan "

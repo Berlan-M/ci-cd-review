@@ -4,4 +4,5 @@ jobs:
   dire_bonjour:
     runs-on: ubuntu-18.04
     steps:
-    - run: echo "Bonjour Berlan "
+    - run: ls -l # Liste les fichier du répertoire courant
+    - run: cat README.md

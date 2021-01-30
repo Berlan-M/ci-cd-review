@@ -8,8 +8,9 @@ jobs:
     - run : sudo apt-get install asciidoctor
     - run : sudo apt-get install nodejs npm
     - run: cd exo-make-file && make
-    - run: npm install netlify-cli -g
-    - run: netlify login # Liste les fichier du répertoire courant
-    - run: netlify sites:create --name "Mrs"
-    - run: netlify deploy --dir=exo-make-file
-    - run: netlify deploy --prod --dir=exo-make-file
+    - uses: netlify/actions/cli@master # Déploiement sur Netlify
+      with:
+        args: deploy --prod --dir=exo-make-file
+      env:
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }} # A définir dans https://github.com/<votre dépôt github>/settings/secrets/actions
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }} # A définir dans https://github.com/<votre dépôt github>/settings/secrets/actions

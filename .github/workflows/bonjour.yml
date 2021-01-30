@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2 # Récupère le contenu du dépôt correspondant au commit du workflow en cours
-    - run: cd ../workspace/exercice-makefile && make
+    - run: cd exo-make-file && make
     - run: npm install netlify-cli -g
     - run: netlify login # Liste les fichier du répertoire courant
     - run: netlify sites:create --name "Mrs"
-    - run: netlify deploy --dir=../workspace/exercice-makefile
-    - run: netlify deploy --prod --dir=../workspace/exercice-makefile
+    - run: netlify deploy --dir=exo-make-file
+    - run: netlify deploy --prod --dir=exo-make-file

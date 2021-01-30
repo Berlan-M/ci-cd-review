@@ -1,0 +1,17 @@
+= Bonjour TSI G 2020, Menu du jour : !
+
+
+
+An introduction to http://asciidoc.org[AsciiDoc].
+
+== First Section
+
+|===
+
+a|image::https://media-cdn.tripadvisor.com/media/photo-s/1a/18/3a/cb/restaurant-le-47.jpg[My Image, 600,160]
+
+|===
+* item 2
+
+[source,bash]
+echo "Bonjour TSI G 2020, Menu du jour :  !"

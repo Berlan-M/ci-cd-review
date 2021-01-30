@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2 # Récupère le contenu du dépôt correspondant au commit du workflow en cours
+    - run : sudo apt-get install asciidoctor
     - run: cd exo-make-file && make
     - run: npm install netlify-cli -g
     - run: netlify login # Liste les fichier du répertoire courant
